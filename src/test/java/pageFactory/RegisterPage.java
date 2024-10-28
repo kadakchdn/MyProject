@@ -45,7 +45,10 @@ public class RegisterPage
 	public void enterFirstName()
 	{
 	
-		firstname_field.sendKeys(GeneratlUtilities.generateDynamicFirstname());
+		String firstname = GeneratlUtilities.generateDynamicFirstname();
+		firstname_field.sendKeys(firstname);
+		GeneratlUtilities.r_firstname=firstname;
+		
 	}
 	
 	public void enterLatName()

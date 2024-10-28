@@ -14,9 +14,9 @@ public class HomePage
 	        PageFactory.initElements(driver, this);
 	    	
 		}
-	
-	
-	   //locating elements using @FindBy annotation
+
+
+		//locating elements using @FindBy annotation
 		@FindBy(xpath="//span[text()='My Account']")
 		WebElement myaccount;
 		
@@ -25,6 +25,9 @@ public class HomePage
 		
 		@FindBy(xpath="(//a[text()='Login'])[1]")
 		WebElement login;
+		
+		@FindBy (xpath="//a[normalize-space()='Contact Us']")
+		WebElement ContactUs;
 
 		//add element for seach field
 		
@@ -47,6 +50,11 @@ public class HomePage
 	   public void clickOnlogin()
 	   {
 		   login.click();
+	   }
+	   
+	   public void ClickOnContactUs()
+	   {
+		   ContactUs.click();
 	   }
 	   
 	   //add method to enter text into searchfield

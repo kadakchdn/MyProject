@@ -12,8 +12,11 @@ import org.openqa.selenium.WebDriver;
 
 public class GeneratlUtilities 
 {
+	public static String r_firstname;
+	public static String r_lastname;
 	public static String r_email;
 	public static String r_password;
+	public static String r_query;
 	
 	public static String generateDynamicFirstname()
 	{
@@ -54,6 +57,13 @@ public class GeneratlUtilities
 		File f1 = ts.getScreenshotAs(OutputType.FILE);
 		File f2=new File("./Screenshots/akshay.png");
 		FileUtils.copyFile(f1, f2);
+	}
+	
+	public static String generateDynamicEnquiry()
+	{
+		String enquiry=RandomStringUtils.randomAlphabetic(7);
+		String query =enquiry+"12345";
+		return query;
 	}
 	
 }

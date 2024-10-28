@@ -1,5 +1,7 @@
 package testCases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -34,7 +36,7 @@ public class TC_02_Login extends BaseTestCase
 		String actual_Text = ma.returntextAfterLogin();
 		String expected_Text="My Account123";
 		
-		Assert.assertEquals(actual_Text, expected_Text);
+		AssertJUnit.assertEquals(actual_Text, expected_Text);
 		
 		logger.info("Login Test Case Pass");
 		

@@ -43,7 +43,7 @@ public class BaseTestCase
 	@AfterMethod
 	void tearDown()
 	{
-		driver.close();
+		//driver.close();
 	}
 
 }
