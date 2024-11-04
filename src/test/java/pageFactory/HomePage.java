@@ -28,6 +28,9 @@ public class HomePage
 		
 		@FindBy (xpath="//a[normalize-space()='Contact Us']")
 		WebElement ContactUs;
+		
+		@FindBy (xpath="//input[@name='search']")
+		WebElement searchBar;
 
 		//add element for seach field
 		
@@ -55,6 +58,11 @@ public class HomePage
 	   public void ClickOnContactUs()
 	   {
 		   ContactUs.click();
+	   }
+	   
+	   public void ClickOnSearchBar()
+	   {
+		   searchBar.click();
 	   }
 	   
 	   //add method to enter text into searchfield
